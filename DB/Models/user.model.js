@@ -12,6 +12,7 @@ const userSchema = new Schema(
       default: "other",
     },
     phone: String,
+    deletedAt: Date
   },
   { timestamps: true }
 );

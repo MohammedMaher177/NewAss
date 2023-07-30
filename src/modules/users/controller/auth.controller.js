@@ -55,3 +55,17 @@ export const signin = asyncHandler(async (req, res) => {
 
   res.json({ message: "success", token });
 });
+
+//7-logout
+export const logOut = asyncHandler(async (req, res) => {
+  const {user} = req;
+  const token = jwt.sign(
+    {
+      id: user._id
+    },
+    "mohammed",{
+      expiresIn : "1s"
+    }
+  );
+  res.json({ message: "success", token });
+})
