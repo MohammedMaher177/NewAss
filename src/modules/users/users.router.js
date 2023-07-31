@@ -25,8 +25,6 @@ router.put("/updateuser", auth, updateUserData)
 // 5-delete user(user must be logged in)
 router.delete("/", auth, deleteUser)
 
-
-
 //6-soft delete(user must be logged in)
 router.delete("/softdelete", auth, softDeleteUser)
 
